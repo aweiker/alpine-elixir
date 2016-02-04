@@ -29,8 +29,9 @@ EXPOSE $PORT
 CMD trap exit TERM; /$APP_NAME/bin/$APP_NAME foreground & wait
 ```
 
-## Inspirations
+## Inspirations and Acknowledgements
 
-bitwalker/alpine-elixir-phoenix
-
+* [bitwalker/alpine-elixir-phoenix](http://github.com/bitwalker/alpine-elixir-phoenix)
+* [msaraiva/alpine-erlang](http://github.com/msaraiva/alpine-erlang)
+* [Dale Ragan](https://github.com/dragan/)
 
