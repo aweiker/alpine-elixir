@@ -7,9 +7,10 @@ the compiled output of just the _exrm_ release and run that. This will allow
 for a smaller container that is being run in production.
 
 ## Getting Started
-Please refer to my excellent getting started guide that I wrote as a part of
-my drone-with-elixir starter kit. If you run into any issues, please file an
-issue or get ahold of me @a\_weiker.
+Please refer to my excellent getting 
+[started guide](https://github.com/drone-demos/drone-with-elixir) that I 
+wrote as a part of my drone-with-elixir starter kit. If you run into any 
+issues, please file an issue or get ahold of me on twitter @a\_weiker.
 
 ## Example Dockerfile
 Please set `APP_NAME` to the correct name of your application and make sure
