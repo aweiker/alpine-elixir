@@ -16,6 +16,7 @@ RUN apk add --no-cache --update erlang-dev=${ERLANG_VERSION} erlang-kernel=${ERL
                      git make g++ wget curl zsh nodejs vim openssh-client && \
     rm -rf /tmp/* /var/cache/apk/* && \
     npm install npm -g --no-progress && \
+    npm install brunch -g --no-progress && \
     addgroup -S -g 1000 elixir && \
     adduser -S -u 1000 elixir elixir
 
