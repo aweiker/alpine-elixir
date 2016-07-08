@@ -15,16 +15,21 @@ RUN apk add --no-cache --update erlang-dev=${ERLANG_VERSION} erlang-kernel=${ERL
                      erlang-erl-interface=${ERLANG_VERSION} erlang-parsetools=${ERLANG_VERSION} erlang-eunit=${ERLANG_VERSION} \
                      git make g++ wget curl zsh nodejs vim openssh-client && \
     rm -rf /tmp/* /var/cache/apk/* && \
-    mix local.hex --force && \
+    npm install npm -g --no-progress && \
+    addgroup -S -g 1000 elixir && \
+    adduser -S -u 1000 elixir elixir
+
+USER elixir
+
+RUN mix local.hex --force && \
     mix local.rebar --force && \
     mix hex.info && \
-    npm install npm -g --no-progress && \
-    git clone --depth=1 https://github.com/robbyrussell/oh-my-zsh.git /root/.oh-my-zsh && \
-    git clone https://github.com/gusaiani/elixir-oh-my-zsh.git /root/.oh-my-zsh/custom/plugins/elixir && \
-    cp /root/.oh-my-zsh/templates/zshrc.zsh-template /root/.zshrc && \
-    awk '{gsub(/ZSH_THEME="robbyrussell"/, "# ZSH_THEME=\"agnoster\""); print}' /root/.zshrc > /root/.zshrc.new && \
-    mv /root/.zshrc.new /root/.zshrc && \
-    awk '{gsub(/plugins=\(git\)/, "plugins=(git elixir)"); print}' /root/.zshrc > /root/.zshrc.new && \
-    mv /root/.zshrc.new /root/.zshrc
+    git clone --depth=1 https://github.com/robbyrussell/oh-my-zsh.git /home/elixir/.oh-my-zsh && \
+    git clone https://github.com/gusaiani/elixir-oh-my-zsh.git /home/elixir/.oh-my-zsh/custom/plugins/elixir && \
+    cp /home/elixir/.oh-my-zsh/templates/zshrc.zsh-template /home/elixir/.zshrc && \
+    awk '{gsub(/ZSH_THEME="robbyrussell"/, "# ZSH_THEME=\"agnoster\""); print}' /home/elixir/.zshrc > /home/elixir/.zshrc.new && \
+    mv /home/elixir/.zshrc.new /home/elixir/.zshrc && \
+    awk '{gsub(/plugins=\(git\)/, "plugins=(git elixir)"); print}' /home/elixir/.zshrc > /home/elixir/.zshrc.new && \
+    mv /home/elixir/.zshrc.new /home/elixir/.zshrc
 
 CMD [ "/bin/zsh" ]
