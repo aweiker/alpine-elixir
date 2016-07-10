@@ -4,5 +4,4 @@ set -e pipefail
 
 VERSION="${PWD##*/}"
 
-docker build -t aweiker/alpine-elixir-dev:$VERSION .
-
+docker build -t aweiker/elixir-dev:$VERSION .
