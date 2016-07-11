@@ -16,8 +16,9 @@ RUN apk add --no-cache --update erlang-dev=${ERLANG_VERSION} erlang-kernel=${ERL
                      erlang-erl-interface=${ERLANG_VERSION} erlang-parsetools=${ERLANG_VERSION} erlang-eunit=${ERLANG_VERSION} \
                      git make g++ wget curl zsh nodejs vim openssh-client && \
     rm -rf /tmp/* /var/cache/apk/* && \
-    npm install npm -g --no-progress && \
-    npm install brunch -g --no-progress && \
+    npm install -g npm --no-progress && \
+    npm install -g coffee-script --no-progress && \
+    npm install -g brunch --no-progress && \
     addgroup -S -g 1000 elixir && \
     adduser -S -u 1000 elixir elixir && \
     ln -s /usr/lib/elixir/bin/elixir /usr/bin/elixir && \
