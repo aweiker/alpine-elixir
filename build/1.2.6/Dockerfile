@@ -13,7 +13,7 @@ RUN apk add --no-cache --update erlang-dev=${ERLANG_VERSION} erlang-kernel=${ERL
                      erlang-inets=${ERLANG_VERSION} erlang-inets=${ERLANG_VERSION} erlang-mnesia=${ERLANG_VERSION}\
                      erlang-odbc=${ERLANG_VERSION} elixir=${ELIXIR_VERSION} erlang-xmerl=${ERLANG_VERSION} \
                      erlang-erl-interface=${ERLANG_VERSION} erlang-parsetools=${ERLANG_VERSION} erlang-eunit=${ERLANG_VERSION} \
-                     make g++ wget curl nodejs vim openssh-client && \
+                     git make g++ wget curl nodejs vim openssh-client && \
     rm -rf /tmp/* /var/cache/apk/* && \
     npm install -g npm --no-progress && \
     npm install -g coffee-script --no-progress && \
