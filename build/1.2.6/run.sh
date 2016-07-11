@@ -7,4 +7,4 @@ docker run -it --rm \
   -w /src \
   -p 4000:4000 \
   --net "host" \
-aweiker/elixir-dev:1.2.6
+aweiker/elixir-build:1.2.6
