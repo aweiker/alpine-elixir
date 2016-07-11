@@ -10,9 +10,9 @@ RUN apk add --no-cache --update erlang-dev=${ERLANG_VERSION} erlang-kernel=${ERL
                      erlang-stdlib=${ERLANG_VERSION} erlang-erts=${ERLANG_VERSION} erlang-tools=${ERLANG_VERSION} \
                      erlang-syntax-tools=${ERLANG_VERSION} erlang-sasl=${ERLANG_VERSION} \
                      erlang-crypto=${ERLANG_VERSION} erlang-public-key=${ERLANG_VERSION} \
-                     erlang-ssl=${ERLANG_VERSION} erlang-ssh=${ERLANG_VERSION} erlang-asn1=${ERLANG_VERSION}\
-                     erlang-inets=${ERLANG_VERSION} erlang-inets=${ERLANG_VERSION} erlang-mnesia=${ERLANG_VERSION}\
-                     erlang-odbc=${ERLANG_VERSION} \
+                     erlang-ssl=${ERLANG_VERSION} erlang-ssh=${ERLANG_VERSION} erlang-asn1=${ERLANG_VERSION} \
+                     erlang-inets=${ERLANG_VERSION} erlang-inets=${ERLANG_VERSION} erlang-mnesia=${ERLANG_VERSION} \
+                     erlang-odbc=${ERLANG_VERSION} erlang-xmerl=${ERLANG_VERSION} \
                      erlang-erl-interface=${ERLANG_VERSION} erlang-parsetools=${ERLANG_VERSION} erlang-eunit=${ERLANG_VERSION} \
                      git make g++ wget curl zsh nodejs vim openssh-client && \
     rm -rf /tmp/* /var/cache/apk/* && \
