@@ -1,8 +1,8 @@
-FROM alpine:edge
+FROM alpine:3.4
 MAINTAINER Aaron Weiker <aaron@weiker.org>
 LABEL Description="Build image with Erlang 18.3.2 | Elixir 1.3.1"
 
-ENV LANG=en_US.UTF-8 ELIXIR_VERSION=1.2.6-r0 ERLANG_VERSION=18.3.2-r0
+ENV LANG=en_US.UTF-8 ERLANG_VERSION=18.3.2-r0
 
 COPY elixir /usr/lib/elixir
 RUN apk add --no-cache --update erlang-dev=${ERLANG_VERSION} erlang-kernel=${ERLANG_VERSION} \
