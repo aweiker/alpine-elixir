@@ -1,8 +1,8 @@
 FROM alpine:edge
 MAINTAINER Aaron Weiker <aaron@weiker.org>
-LABEL Description="Erlang 19.0.2 | Elixir 1.3.3"
+LABEL Description="Erlang 19.1.0 | Elixir 1.3.4"
 
-ENV LANG=en_US.UTF-8 ELIXIR_VERSION=1.3.3 ERLANG_VERSION=19.0.2-r0
+ENV LANG=en_US.UTF-8 ELIXIR_VERSION=1.3.4 ERLANG_VERSION=19.1.0-r0
 
 COPY elixir /usr/lib/elixir
 RUN apk add --update erlang-dev=${ERLANG_VERSION} erlang-kernel=${ERLANG_VERSION} \
