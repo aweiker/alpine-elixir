@@ -2,7 +2,7 @@ FROM alpine:3.5
 MAINTAINER Aaron Weiker <aaron@weiker.org>
 LABEL Description="Build image with Erlang 19.1.0 | Elixir 1.4.4"
 
-ENV LANG=en_US.UTF-8 ELIXIR_VERSION=1.4.0 ERLANG_VERSION=19.1.0-r0
+ENV LANG=en_US.UTF-8 ELIXIR_VERSION=1.4.4 ERLANG_VERSION=19.1.0-r0
 
 COPY elixir /usr/lib/elixir
 RUN apk add --no-cache --update erlang-dev=${ERLANG_VERSION} erlang-kernel=${ERLANG_VERSION} \
